@@ -33,16 +33,16 @@ def main():
             print("thank u ")
 def send_message():
     msg = MIMEMultipart()
-    msg['From'] = 'gyawali.sanjeevs98@gmail.com'
-    msg['To'] = "gyawali.sanjeevs98@gmail.com"
+    msg['From'] = 'Email@gmail.com'
+    msg['To'] = "Email98@gmail.com"
     msg['Subject'] = '***Out of Stock***'
     body = "***Something goes wrong or Out of Stock***"
     msg.attach(MIMEText(body, 'plain'))
     text = msg.as_string()
-    address_info = "gyawali.sanjeevs98@gmail.com"
+    address_info = "Email@gmail.com"
     print(address_info, text)
-    sender_email = "gyawali.sanjeevs98@gmail.com"
-    sender_password = "Passwordsanjeevs98"
+    sender_email = "Email@gmail.com"
+    sender_password = "Password"
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(sender_email, sender_password)
